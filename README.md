@@ -1,9 +1,13 @@
 # 🌦️ Weather Data Pipeline with Airflow, Docker, Postgres & Metabase
 
 This is an end-to-end data pipeline that fetches daily weather data for Moroccan cities using the OpenWeatherMap API, stores it in a PostgreSQL database via Apache Airflow, and visualizes it using Metabase.
-
 ---
+## 🧱 Architecture Overview
 
+<p align="center">
+  <img src="images/project_architecture_diagram.png" alt="Project Architecture Diagram" width="85%">
+</p>
+---
 ## 🛠️ Tech Stack
 
 - **Airflow** (ETL Orchestration)
@@ -14,11 +18,7 @@ This is an end-to-end data pipeline that fetches daily weather data for Moroccan
 
 ---
 
-## 🧱 Architecture Overview
 
-<p align="center">
-  <img src="images/project_architecture_diagram.png" alt="Project Architecture Diagram" width="85%">
-</p>
 
 The pipeline follows a classic ETL pattern:
 
@@ -43,7 +43,7 @@ The pipeline follows a classic ETL pattern:
 ## 📊 Dashboard Preview
 
 <p align="center">
-  <img src="images/metabase_dashboard.png" alt="Metabase Weather Dashboard" width="90%">
+  <img src="images/weatherdash.png" alt="Metabase Weather Dashboard" width="90%">
 </p>
 
 The Metabase dashboard provides insights into:
@@ -141,7 +141,7 @@ This project is open source and available under the MIT License.
 ---
 
 
-**Congratulations on completing your ETL project!** 🎉
+**Congratulations ** 🎉
 
 ---
 
