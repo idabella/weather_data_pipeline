@@ -9,18 +9,18 @@ import os
 # Retrieve API key from environment variable (set via Docker Compose)
 API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
-# List of major UK cities with coordinates for accurate weather data
-UK_CITIES = [
-    {"name": "London", "lat": 51.5074, "lon": -0.1278},
-    {"name": "Birmingham", "lat": 52.4862, "lon": -1.8904},
-    {"name": "Manchester", "lat": 53.4808, "lon": -2.2426},
-    {"name": "Glasgow", "lat": 55.8642, "lon": -4.2518},
-    {"name": "Liverpool", "lat": 53.4084, "lon": -2.9916},
-    {"name": "Leeds", "lat": 53.8008, "lon": -1.5491},
-    {"name": "Sheffield", "lat": 53.3811, "lon": -1.4701},
-    {"name": "Bristol", "lat": 51.4545, "lon": -2.5879},
-    {"name": "Newcastle", "lat": 54.9784, "lon": -1.6174},
-    {"name": "Nottingham", "lat": 52.9548, "lon": -1.1581}
+# List of 10 principal Moroccan cities with coordinates for accurate weather data
+MOROCCAN_CITIES = [
+    {"name": "Casablanca", "lat": 33.5731, "lon": -7.5898},
+    {"name": "Rabat", "lat": 34.0209, "lon": -6.8416},
+    {"name": "Fes", "lat": 34.0181, "lon": -5.0078},
+    {"name": "Marrakech", "lat": 31.6295, "lon": -7.9811},
+    {"name": "Tangier", "lat": 35.7595, "lon": -5.8340},
+    {"name": "Agadir", "lat": 30.4278, "lon": -9.5981},
+    {"name": "Meknes", "lat": 33.8935, "lon": -5.5473},
+    {"name": "Oujda", "lat": 34.6814, "lon": -1.9086},
+    {"name": "Kenitra", "lat": 34.2610, "lon": -6.5802},
+    {"name": "Tetouan", "lat": 35.5889, "lon": -5.3626}
 ]
 
 
@@ -52,7 +52,7 @@ def store_weather():
     )
     cur = conn.cursor()
 
-    for city in UK_CITIES:
+    for city in MOROCCAN_CITIES:
         try:
             # Fetch and log weather data
             weather = fetch_weather(city["lat"], city["lon"], city["name"])
